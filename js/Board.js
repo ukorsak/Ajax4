@@ -13,7 +13,7 @@ $('.create-column')
 		$.ajax({
 			url: baseUrl + "/column",
 			method: "POST",
-			date: {
+			data: {
 				name: columnName
 			},
 			success: function(response){
