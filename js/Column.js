@@ -74,7 +74,6 @@ Column.prototype = {
 			name: editName
 		},
 	  	success: function(response){
-	  		var columnTitle = $('<h2 class="column-title">' + editName + '</h2>');
 	  		self.element.children('h2').replaceWith('<h2 class="column-title">' + editName + '</h2>');
 	  	}
 	  });
