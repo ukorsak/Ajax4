@@ -34,7 +34,7 @@ function Column(id, name) {
 					bootcamp_kanban_column_id: self.id
 				},
 				success: function(response) {
-					var card = new Card(response.id, cardName);
+					var card = new Card(response.id, cardName, self.id);
 					self.createCard(card);
 				}
 			});
@@ -66,7 +66,7 @@ Column.prototype = {
 	},
 	editColumn: function() {
 	  var self = this;
-	  var editName = prompt("Wpisz nazwę karty");
+	  var editName = prompt("Wpisz nazwę kolumny");
 	  $.ajax({
 	  	url: baseUrl + '/column/' + self.id,
 	  	method: "PUT",
